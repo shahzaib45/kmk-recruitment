@@ -1,0 +1,100 @@
+{{ define "main" }}
+	<div class="page-heading">
+		<div class="container">
+			<h1 class="text-primary">
+				Vacancy Details
+			</h1>
+		</div>
+	</div>
+
+	<div class="vacancy-detail">
+		<div class="container">
+			<div class="row g-0">
+				<div class="col-md-7 order-md-1 order-2">
+					<h1 class="vacancy-heading">{{ .Params.title }}</h1>
+					<p class="vacancy-text">
+						{{ .Params.summary }}
+					</p>
+					<h2 class="vacancy-subheading">
+						Job Responsibilities
+					</h2>
+					<p>
+						<ul class="vacancy-points">
+							<li>{{ .Params.responsibilities }}</li>
+						</ul>
+					</p>
+					<h2 class="vacancy-subheading">Requirements</h2>
+					<p>
+						<ul class="vacancy-points">
+							<li>{{ .Params.requirements }}</li>
+						</ul>
+					</p>
+				</div>
+				<div class="col-lg-4 col-md-5 offset-lg-1 order-md-2 order-1">
+					<div class="vacancy-box">
+						<div class="vacancy-card-img">
+							<img src="{{ .Params.imgfile }}" alt="">
+						</div>
+						<h3 class="vacancy-box-head mt-4">
+							{{ .Params.title }}
+						</h3>
+						<h3 class="vacancy-box-subhead text-primary mt-3">
+							{{ .Params.category }}
+						</h3>
+						<h3 class="vacancy-box-subhead text-primary mt-4">
+							Job Overview
+						</h3>
+						<div class="vacancy-meta mt-3">
+							<div class="row">
+								<div class="col-6">
+									<span>Job Type</span>
+								</div>
+								<div class="col-6">
+									<span>{{ .Params.jobtype }}</span>
+								</div>
+								<div class="col-6">
+									<span>Industry</span>
+								</div>
+								<div class="col-6">
+									<span>{{ .Params.industry }}</span>
+								</div>
+								<div class="col-6">
+									<span>Location</span>
+								</div>
+								<div class="col-6">
+									<span>{{ .Params.location }}</span>
+								</div>
+								<div class="col-6">
+									<span>Salary</span>
+								</div>
+								<div class="col-6">
+									<span>{{ .Params.salary }}</span>
+								</div>
+								<div class="col-6">
+									<span>Qualification</span>
+								</div>
+								<div class="col-6">
+									<span>{{ .Params.qualifications }}</span>
+								</div>
+								<div class="col-6">
+									<span>Skills</span>
+								</div>
+								<div class="col-6">
+									<span>{{ .Params.skills }}</span>
+								</div>
+							</div>
+						</div>
+						<div class="vacancy-box-btn mt-4">
+							<a href="mailto:info@kmkrecruitment.co.uk" class="btn btn-primary py-2 px-5">
+								Submit Your CV
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="spacer"></div>
+
+{{ end }}

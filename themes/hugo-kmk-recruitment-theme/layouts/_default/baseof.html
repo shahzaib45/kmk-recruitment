@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+        {{- partial "head.html" . -}}
+</head>
+    <body>
+        {{ if .IsHome }}
+        <div class="preloader">
+            <div class="spinner-border " role="status">
+            </div>
+            <img src="/assets/img/logo-pink.png" class="preloader-img" alt="">
+        </div>
+        {{ else if or (eq .Type "RC") (eq .Type "vacancies") }}
+        <div class="preloader">
+            <div class="spinner-border " role="status">
+            </div>
+            <img src="/assets/img/logo-pink.png" class="preloader-img" alt="">
+        </div>
+        {{ else if or (eq .Type "HR") (eq .Type "vacancies-hr") }}
+        <div class="preloader">
+            <div class="spinner-border " role="status">
+            </div>
+            <img src="/assets/img/logo-orange.png" class="preloader-img" alt="">
+        </div>
+        {{ else }}
+        {{ end }}
+        {{- partial "header.html" . -}}
+        <div id="content">
+        {{- block "main" . }}{{- end }}
+        </div>
+        {{- partial "footer.html" . -}}
+        <script src="/assets/js/bootstrap.bundle.min.js"></script>
+        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/assets/js/slick.js"></script>
+        <script src="/assets/js/main.js"></script>
+        <script src="/code.js"></script>
+    </body>
+</html>

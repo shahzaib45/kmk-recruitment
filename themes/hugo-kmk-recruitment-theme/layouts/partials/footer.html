@@ -1,0 +1,118 @@
+{{ if .IsHome }}
+
+{{ else if or (eq .Type "RC") (eq .Type "RC-Home") (eq .Type "vacancies") }}
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-4">
+					<div class="footer-logo">
+						<img src="/assets/img/footer-logo.png" alt="">
+					</div>
+					<div class="footer-left-text">
+						<p>KMK Recruitment <br>1 Poultry, London, EC2R 8EJ</p>
+					</div>
+				</div>
+				<div class="col-8 text-end">
+					<div class="footer-social">
+						<a href="https://twitter.com/KMKRecruitment" target="_blank" class="text-muted text-decoration-none">
+							<i class="fab fa-twitter-square"></i>
+						</a>
+						<a href="https://www.instagram.com/kmkrecruitment/" target="_blank" class="text-muted text-decoration-none">
+							<i class="fab fa-instagram-square"></i>
+						</a>
+						<a href="https://www.linkedin.com/company/kmk-recruitment/" target="_blank" class="text-muted text-decoration-none">
+							<i class="fab fa-linkedin"></i>
+						</a>
+					</div>
+					<div class="footer-right-text d-md-block d-none">
+						<p>
+							P: <a href="tel:02080768451" class="text-muted text-decoration-none">020 8076 8451</a> <br> 
+							E: <a href="mailto:info@kmkrecruitment.co.uk" class="text-muted text-decoration-none">info@kmkrecruitment.co.uk</a> <br>
+							<a href="/assets/files/kmk-timesheet.doc" class="text-decoration-none text-muted">Download Time Sheet</a> <br>
+							<a href="/assets/files/privacy-policy.pdf" target="_blank" class="text-decoration-none text-muted">Privacy Policy</a> 
+							<a href="/assets/files/cookie-policy.pdf" target="_blank" class="text-decoration-none text-muted">Cookie Policy</a></p>
+					</div>
+					<div class="footer-right-text-mob d-block d-md-none">
+						<p>
+							<a href="/assets/files/privacy-policy.pdf" class="text-decoration-none text-muted d-block">Privacy Policy</a> 
+							<a href="/assets/files/cookie-policy.pdf" class="text-decoration-none text-muted d-block">Cookie Policy</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<div class="copyright-text">
+						Copyright© 2021. KMK Recruitment
+					</div>
+				</div>
+				<div class="col-12 mt-2">
+					<div class="empowered text-center">
+						<a href="https://colonywebsolutions.com" class="text-decoration-none text-muted" target="_blank">Empowered by Colony Web Solutions</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{{ else if or (eq .Type "HR") (eq .Type "HR-Home") (eq .Type "vacancies-hr") }}
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-4">
+					<div class="footer-logo">
+						<img src="/assets/img/footer-logo-orange.png" alt="">
+					</div>
+					<div class="footer-left-text">
+						<p>KMK Recruitment <br>1 Poultry, London, EC2R 8EJ</p>
+					</div>
+				</div>
+				<div class="col-8 text-end">
+					<div class="footer-social">
+						<a href="https://twitter.com/KMKRecruitment" target="_blank" class="text-muted text-decoration-none">
+							<i class="fab fa-twitter-square"></i>
+						</a>
+						<a href="https://www.instagram.com/kmkrecruitment/" target="_blank" class="text-muted text-decoration-none">
+							<i class="fab fa-instagram-square"></i>
+						</a>
+						<a href="https://www.linkedin.com/company/kmk-recruitment/" target="_blank" class="text-muted text-decoration-none">
+							<i class="fab fa-linkedin"></i>
+						</a>
+					</div>
+					<div class="footer-right-text d-md-block d-none">
+						<p>
+							P: <a href="tel:02080768451" class="text-muted text-decoration-none">020 8076 8451</a> <br> 
+							E: <a href="mailto:info@kmkrecruitment.co.uk" class="text-muted text-decoration-none">info@kmkrecruitment.co.uk</a> <br>
+							<a href="/assets/files/kmk-timesheet.doc" class="text-decoration-none text-muted">Download Time Sheet</a> <br>
+							<a href="/assets/files/privacy-policy.pdf" target="_blank" class="text-decoration-none text-muted">Privacy Policy</a> 
+							<a href="/assets/files/cookie-policy.pdf" target="_blank" class="text-decoration-none text-muted">Cookie Policy</a></p>
+					</div>
+					<div class="footer-right-text-mob d-block d-md-none">
+						<p>
+							<a href="/assets/files/privacy-policy.pdf" class="text-decoration-none text-muted d-block">Privacy Policy</a> 
+							<a href="/assets/files/cookie-policy.pdf" class="text-decoration-none text-muted d-block">Cookie Policy</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<div class="copyright-text">
+						Copyright© 2021. KMK Recruitment
+					</div>
+				</div>
+				<div class="col-12 mt-2">
+					<div class="empowered text-center">
+						<a href="https://colonywebsolutions.com" class="text-decoration-none text-muted" target="_blank">Empowered by Colony Web Solutions</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{{else}}
+{{end}}

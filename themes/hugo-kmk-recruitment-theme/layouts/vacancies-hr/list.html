@@ -1,0 +1,59 @@
+{{ define "main" }}
+	<div class="page-heading">
+		<div class="container">
+			<h1 class="text-primary">
+				Vacancies
+			</h1>
+		</div>
+	</div>
+
+	<div class="all-vacancies">
+		<div class="container">
+			<div class="row mt-5 g-5">
+				{{ $.Scratch.Set "counter" 0}}
+				{{ range $i,$p := (.Paginator 9).Pages }}
+				<div class="col-md-4">
+					<a href="{{ .Params.vacancyurl }}" class="vacancy-link">
+						<div class="vacancy-card position-relative">
+							{{ if in (lower .Params.jobtype) "permenant" }}
+							<div class="vacancy-ribbon bg-success">
+							{{ else if in (lower .Params.jobtype) "contract" }}
+							<div class="vacancy-ribbon bg-orange">
+							{{ else if in (lower .Params.jobtype) "temporary" }}
+							<div class="vacancy-ribbon bg-warning">
+							{{ else }}
+							{{ end }}
+								{{ .Params.jobtype }}
+							</div>
+							<div class="vacancy-img">
+								<img src="{{ .Params.imgfile }}" alt="">
+							</div>
+							<div class="vacancy-meta">
+								<h1>
+									{{ .Params.title }}
+								</h1>
+								<h1 class="text-primary">
+									{{ .Params.industry }}
+								</h1>
+								<p>
+									{{ .Params.summary }}
+								</p>
+							</div>
+							<div class="vacancy-location">
+								<br>
+								<i class="fas fa-map-marker-alt"></i>
+								{{ .Params.location }}
+							</div>
+						</div>
+					</a>
+				</div>
+					{{ if modBool (add $i 1) 3 }}
+					</div>
+						<div class="row mt-5 g-5">
+					{{ end }}
+
+					{{end}}
+		</div>
+</div>
+ 
+{{ end }}
