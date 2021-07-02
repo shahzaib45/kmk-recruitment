@@ -1,0 +1,50 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+media_folder: static/img
+public_folder: /img
+collections:
+
+  - name: 'vacancies'
+    label: 'Vacancies'
+    folder: 'content/vacancies'
+    create: true
+    delete: true
+    slug: '{{title}}-{{year}}-{{month}}-{{day}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string'}
+      - { label: 'Draft', name: 'draft', widget: 'hidden', default: false }
+      - { label: 'Industry', name: 'industry', widget: 'select', options: ['Financial Services', 'Media, Advertising & PR', 'Not for Profit', 'Professional Services', 'Property', 'Retail / Luxury Brands', 'Startups / SMEs', 'Tech / Fin-Tech'] }
+      - { label: 'Job Type', name: 'jobtype', widget: 'select', options: ['Permenant', 'Contract', 'Temporary'] }
+      - { label: 'Location', name: "location", widget: "string" }
+      - { label: 'Salary', name: "salary", widget: "string" }
+      - { label: 'Qualifications', name: "qualifications", widget: "string", required: false }
+      - { label: 'Skills', name: "skills", widget: "string", required: false }
+      - { label: 'Summary', name: 'summary', widget: 'markdown' }
+      - { label: 'Responsibilities', name: 'responsibilities', widget: 'markdown'}
+      - { label: 'Requirements', name: 'requirements', widget: 'markdown'}
+      - { label: "Image File", name: "imgfile", widget: "image", required: false }
+
+  - name: 'vacancies-hr'
+    label: 'HR Vacancy'
+    folder: 'content/vacancies-hr'
+    create: true
+    delete: true
+    slug: '{{title}}-{{year}}-{{month}}-{{day}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string'}
+      - { label: 'Draft', name: 'draft', widget: 'hidden', default: false }
+      - { label: 'Industry', name: 'industry', widget: 'select', options: ['Financial Services', 'Media, Advertising & PR', 'Not for Profit', 'Professional Services', 'Property', 'Retail / Luxury Brands', 'Startups / SMEs', 'Tech / Fin-Tech'] }
+      - { label: 'Job Type', name: 'jobtype', widget: 'select', options: ['Permenant', 'Contract', 'Temporary'] }
+      - { label: 'Location', name: "location", widget: "string" }
+      - { label: 'Salary', name: "salary", widget: "string" }
+      - { label: 'Qualifications', name: "qualifications", widget: "string", required: false }
+      - { label: 'Skills', name: "skills", widget: "string", required: false }
+      - { label: 'Summary', name: 'summary', widget: 'markdown' }
+      - { label: 'Responsibilities', name: 'responsibilities', widget: 'markdown'}
+      - { label: 'Requirements', name: 'requirements', widget: 'markdown'}
+      - { label: "Image File", name: "imgfile", widget: "image", required: false }
